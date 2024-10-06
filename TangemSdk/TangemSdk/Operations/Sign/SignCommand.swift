@@ -56,7 +56,7 @@ public class SignCommand: Command {
     ///   - hashes: Array of transaction hashes.
     ///   - walletPublicKey: Public key of the wallet, using for sign.
     ///   - derivationPath: Derivation path of the wallet. Optional. COS v. 4.28 and higher,
-    init(hashes: [Data], walletPublicKey: Data, derivationPath: DerivationPath? = nil) {
+    public init(hashes: [Data], walletPublicKey: Data, derivationPath: DerivationPath? = nil) {
         self.hashes = hashes
         self.walletPublicKey = walletPublicKey
         self.derivationPath = derivationPath
@@ -104,7 +104,7 @@ public class SignCommand: Command {
         return nil
     }
     
-    func run(in session: CardSession, completion: @escaping CompletionResult<SignResponse>) {
+    public func run(in session: CardSession, completion: @escaping CompletionResult<SignResponse>) {
         if hashes.isEmpty {
             completion(.failure(.emptyHashes))
             return
