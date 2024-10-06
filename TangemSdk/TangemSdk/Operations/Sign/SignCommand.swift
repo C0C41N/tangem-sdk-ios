@@ -20,7 +20,7 @@ public struct SignResponse: JSONStringConvertible {
 
 /// Signs transaction hashes using a wallet private key, stored on the card.
 @available(iOS 13.0, *)
-class SignCommand: Command {
+public class SignCommand: Command {
     var requiresPasscode: Bool { return true }
     
     private let walletPublicKey: Data
