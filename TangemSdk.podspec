@@ -7,18 +7,17 @@
 #
 
 Pod::Spec.new do |s|
-  s.name = 'TangemSdk'
-  s.version = '3.8.0'
-  s.summary = 'Use TangemSdk for Tangem cards integration'
+  s.name = 'TangemSdk_Codora'
+  s.version = '5.16.0'
+  s.summary = 'TangemSdk fork for Codora'
   s.description = <<-DESC
 Tangem is a Swiss-based secure hardware wallet manufacturer that enables blockchain-based assets to be kept in custody within smart physical banknotes and accessed via NFC technology. Tangem’s mission is to make digital assets accessible, affordable and convenient for consumers.
                   DESC
 
-  s.homepage = 'https://github.com/Tangem/tangem-sdk-ios'
+  s.homepage = 'https://github.com/C0C41N/tangem-sdk-ios'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
-  s.author = { 'Tangem' => 'hello@tangem.com' }
-  s.source = { :git => 'https://github.com/Tangem/tangem-sdk-ios.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/Tangem'
+  s.author = { 'C0C41N' => '0ct41n@gmail.com' }
+  s.source = { :git => 'https://github.com/C0C41N/tangem-sdk-ios.git', :tag => s.version.to_s }
   s.platform = :ios
   s.ios.deployment_target = '11.0'
   s.swift_version = '5.0'
