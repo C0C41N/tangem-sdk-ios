@@ -5,8 +5,6 @@
 //  Created by Ali M. on 06/10/2024.
 //
 
-import TangemSdk
-
 @available(iOS 13.0, *)
 extension CreateWalletTask {
     public func runAsync(in session: CardSession) async -> Eval<CreateWalletResponse, Error> {

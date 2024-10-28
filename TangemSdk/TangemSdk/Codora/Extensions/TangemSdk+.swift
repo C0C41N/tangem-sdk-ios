@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import TangemSdk
 
 @available(iOS 13.0, *)
 extension TangemSdk {

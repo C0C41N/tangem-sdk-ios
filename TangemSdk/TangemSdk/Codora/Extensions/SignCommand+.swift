@@ -5,8 +5,6 @@
 //  Created by Ali M. on 07/10/2024.
 //
 
-import TangemSdk
-
 @available(iOS 13.0, *)
 extension SignCommand {
     public func runAsync(in session: CardSession) async -> Eval<SignResponse, Error> {
