@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'TangemSdk_Codora'
-  s.version = '5.16.1'
+  s.version = '5.16.2'
   s.summary = 'TangemSdk fork for Codora'
   s.description = <<-DESC
 Tangem is a Swiss-based secure hardware wallet manufacturer that enables blockchain-based assets to be kept in custody within smart physical banknotes and accessed via NFC technology. Tangem’s mission is to make digital assets accessible, affordable and convenient for consumers.
