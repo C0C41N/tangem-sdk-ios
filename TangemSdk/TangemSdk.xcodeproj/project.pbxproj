@@ -374,11 +374,7 @@
 		DCEA3ABE2875AF0F00B0B0DA /* SecureStorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEA3ABD2875AF0F00B0B0DA /* SecureStorageKey.swift */; };
 		DCF6188429F069DB001BE133 /* AttestCardKey.json in Resources */ = {isa = PBXBuildFile; fileRef = DCF6188329F069DB001BE133 /* AttestCardKey.json */; };
 		DCFCA17728F5629F0037586C /* FocusableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFCA17628F5629F0037586C /* FocusableTextField.swift */; };
-		E3D801D12CCF8CF20058FFD2 /* TangemSdk+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D801CB2CCF8CF20058FFD2 /* TangemSdk+.swift */; };
-		E3D801D22CCF8CF20058FFD2 /* CreateWalletTask+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D801C72CCF8CF20058FFD2 /* CreateWalletTask+.swift */; };
-		E3D801D32CCF8CF20058FFD2 /* PurgeWalletCommand+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D801C82CCF8CF20058FFD2 /* PurgeWalletCommand+.swift */; };
-		E3D801D42CCF8CF20058FFD2 /* SignCommand+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D801CA2CCF8CF20058FFD2 /* SignCommand+.swift */; };
-		E3D801D52CCF8CF20058FFD2 /* ScanTask+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D801C92CCF8CF20058FFD2 /* ScanTask+.swift */; };
+		E3D801D12CCF8CF20058FFD2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D801CB2CCF8CF20058FFD2 /* Extensions.swift */; };
 		E3D801D62CCF8CF20058FFD2 /* TangemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D801CE2CCF8CF20058FFD2 /* TangemProvider.swift */; };
 		E3D801D72CCF8CF20058FFD2 /* Eval.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D801CD2CCF8CF20058FFD2 /* Eval.swift */; };
 /* End PBXBuildFile section */
@@ -771,11 +767,7 @@
 		DCEA3ABD2875AF0F00B0B0DA /* SecureStorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorageKey.swift; sourceTree = "<group>"; };
 		DCF6188329F069DB001BE133 /* AttestCardKey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AttestCardKey.json; sourceTree = "<group>"; };
 		DCFCA17628F5629F0037586C /* FocusableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusableTextField.swift; sourceTree = "<group>"; };
-		E3D801C72CCF8CF20058FFD2 /* CreateWalletTask+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateWalletTask+.swift"; sourceTree = "<group>"; };
-		E3D801C82CCF8CF20058FFD2 /* PurgeWalletCommand+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PurgeWalletCommand+.swift"; sourceTree = "<group>"; };
-		E3D801C92CCF8CF20058FFD2 /* ScanTask+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScanTask+.swift"; sourceTree = "<group>"; };
-		E3D801CA2CCF8CF20058FFD2 /* SignCommand+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignCommand+.swift"; sourceTree = "<group>"; };
-		E3D801CB2CCF8CF20058FFD2 /* TangemSdk+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TangemSdk+.swift"; sourceTree = "<group>"; };
+		E3D801CB2CCF8CF20058FFD2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E3D801CD2CCF8CF20058FFD2 /* Eval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eval.swift; sourceTree = "<group>"; };
 		E3D801CE2CCF8CF20058FFD2 /* TangemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangemProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1723,32 +1715,12 @@
 			path = schnorrsig;
 			sourceTree = "<group>";
 		};
-		E3D801CC2CCF8CF20058FFD2 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E3D801C72CCF8CF20058FFD2 /* CreateWalletTask+.swift */,
-				E3D801C82CCF8CF20058FFD2 /* PurgeWalletCommand+.swift */,
-				E3D801C92CCF8CF20058FFD2 /* ScanTask+.swift */,
-				E3D801CA2CCF8CF20058FFD2 /* SignCommand+.swift */,
-				E3D801CB2CCF8CF20058FFD2 /* TangemSdk+.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		E3D801CF2CCF8CF20058FFD2 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				E3D801CD2CCF8CF20058FFD2 /* Eval.swift */,
-				E3D801CE2CCF8CF20058FFD2 /* TangemProvider.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		E3D801D02CCF8CF20058FFD2 /* Codora */ = {
 			isa = PBXGroup;
 			children = (
-				E3D801CC2CCF8CF20058FFD2 /* Extensions */,
-				E3D801CF2CCF8CF20058FFD2 /* Utils */,
+				E3D801CD2CCF8CF20058FFD2 /* Eval.swift */,
+				E3D801CB2CCF8CF20058FFD2 /* Extensions.swift */,
+				E3D801CE2CCF8CF20058FFD2 /* TangemProvider.swift */,
 			);
 			path = Codora;
 			sourceTree = "<group>";
@@ -2161,11 +2133,7 @@
 				5DF4388226B1A0CE0038D43E /* HapticsEngine.swift in Sources */,
 				5D445B7C26E29C2D00F6F0FE /* ResetPinTask.swift in Sources */,
 				5D5242672727FE37007FEB03 /* ResetUserCodesView.swift in Sources */,
-				E3D801D12CCF8CF20058FFD2 /* TangemSdk+.swift in Sources */,
-				E3D801D22CCF8CF20058FFD2 /* CreateWalletTask+.swift in Sources */,
-				E3D801D32CCF8CF20058FFD2 /* PurgeWalletCommand+.swift in Sources */,
-				E3D801D42CCF8CF20058FFD2 /* SignCommand+.swift in Sources */,
-				E3D801D52CCF8CF20058FFD2 /* ScanTask+.swift in Sources */,
+				E3D801D12CCF8CF20058FFD2 /* Extensions.swift in Sources */,
 				E3D801D62CCF8CF20058FFD2 /* TangemProvider.swift in Sources */,
 				E3D801D72CCF8CF20058FFD2 /* Eval.swift in Sources */,
 				5D46F1552681032B00DC6447 /* SignHashCommand.swift in Sources */,
