@@ -1,17 +1,26 @@
-//
-//  SignAsync.swift
-//  TangemSdk
-//
-//  Created by Ali M. on 06/10/2024.
-//
+    //
+    //  SignAsync.swift
+    //  TangemSdk
+    //
+    //  Created by Ali M. on 06/10/2024.
+    //
 
 import Foundation
 
 @available(iOS 13.0, *)
 extension TangemSdk {
-    public func startSessionAsync(cardId: String?, accessCode: String?) async -> Eval<CardSession, TangemSdkError> {
+    public func startSessionAsync(
+        cardId: String?,
+        accessCode: String?,
+        msgHeader: String?,
+        msgBody: String?
+    ) async -> Eval<CardSession, TangemSdkError> {
         await withCheckedContinuation { continuation in
-            self.startSession(cardId: cardId, accessCode: accessCode) { session, error in
+            self.startSession(
+                cardId: cardId,
+                initialMessage: .init(header: msgHeader, body: msgBody),
+                accessCode: accessCode
+            ) { session, error in
                 if let error = error {
                     continuation.resume(returning: .failure(error))
                 } else {
@@ -52,7 +61,7 @@ extension BackupService {
             }
         }
     }
-    
+
     public func addBackupCardAsync() async -> Eval<Void, TangemSdkError> {
         await withCheckedContinuation { continuation in
             self.addBackupCard() { result in
@@ -65,7 +74,7 @@ extension BackupService {
             }
         }
     }
-    
+
     public func proceedBackupAsync() async -> Eval<Card, TangemSdkError> {
         await withCheckedContinuation { continuation in
             self.proceedBackup() { result in
