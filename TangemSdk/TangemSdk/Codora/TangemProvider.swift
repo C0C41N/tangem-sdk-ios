@@ -18,7 +18,7 @@ public class TangemProvider {
         config.allowUntrustedCards = true
         config.handleErrors = true
         config.filter.allowedCardTypes = FirmwareVersion.FirmwareType.allCases
-        config.accessCodeRequestPolicy = .always
+        config.accessCodeRequestPolicy = .alwaysWithBiometrics
         config.logConfig = .release
 
         config.defaultDerivationPaths = [:]
