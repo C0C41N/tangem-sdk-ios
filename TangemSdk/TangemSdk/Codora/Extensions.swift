@@ -1,10 +1,3 @@
-    //
-    //  SignAsync.swift
-    //  TangemSdk
-    //
-    //  Created by Ali M. on 06/10/2024.
-    //
-
 import Foundation
 
 @available(iOS 13.0, *)
