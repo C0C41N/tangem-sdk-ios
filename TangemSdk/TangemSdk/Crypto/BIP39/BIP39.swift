@@ -81,7 +81,7 @@ public struct BIP39 {
     ///   - entropyLength: The  entropy length to use. Default is 128 bit.
     ///   - wordlist: The wordlist to use. Default is english.
     /// - Returns: The generated mnemonic splitted to components
-    func generateMnemonic(entropyLength: EntropyLength = .bits128, wordlist: Wordlist = .en) throws -> [String] {
+    public func generateMnemonic(entropyLength: EntropyLength = .bits128, wordlist: Wordlist = .en) throws -> [String] {
         guard entropyLength.rawValue % 32 == 0 else {
             throw MnemonicError.mnenmonicCreationFailed
         }
