@@ -111,7 +111,7 @@ public struct BIP39 {
     ///   - entropyData: The entropy data in hex format
     ///   - wordlist: The wordlist to use.
     /// - Returns: The generated mnemonic
-    func generateMnemonic(from entropyData: Data, wordlist: Wordlist) throws -> [String] {
+    public func generateMnemonic(from entropyData: Data, wordlist: Wordlist) throws -> [String] {
         guard let entropyLength = EntropyLength(rawValue: entropyData.count * 8) else {
             throw MnemonicError.invalidEntropyLength
         }
@@ -173,7 +173,7 @@ public struct BIP39 {
     /// Convert mnemonic componets to a sungle string, splitted by spaces
     /// - Parameter mnemonicComponents: Menemonic components to use
     /// - Returns: The mnemonic string
-    func convertToMnemonicString(_ mnemonicComponents: [String]) -> String {
+    public func convertToMnemonicString(_ mnemonicComponents: [String]) -> String {
         return mnemonicComponents.joined(separator: " ")
     }
 
